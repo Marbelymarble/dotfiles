@@ -1,0 +1,6 @@
+# yazi keymap.toml
+
+[[mgr.prepend_keymap]]
+on   = [ "w", "p" ]
+run  = "shell \"~/.config/scripts/Wallpaper/WPset.sh %h\" \"swaybg -o DP-1 -i ~/Pictures/Wallpaper/blurry.jpg\" "
+desc = "sets hovered image as wallpaper"

@@ -1,0 +1,16 @@
+[Unit]
+Description=Idle daemon
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/swayidle -w \
+    timeout 600 '~/.config/scripts/Lock/lockscript.sh' \
+    timeout 630 'niri msg action power-off-monitors' \
+    before-sleep '~/.config/scripts/Lock/lockscript.sh'
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
+

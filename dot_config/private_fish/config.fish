@@ -8,6 +8,8 @@ set fish_greeting
 starship init fish | source
 fish_config theme choose catppuccin-macchiato --color-theme=dark
 
+cat /home/marble/.cache/wal/sequences
+
 function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
     command yazi $argv --cwd-file="$tmp"
